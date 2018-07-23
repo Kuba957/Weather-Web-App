@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.2.0/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.2.0/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+    <link href="../../resources/static/css/weatherapp.css"
+          th:href="@{/css/weatherapp.css}"
+          rel="stylesheet"/>
+    <link href="../../resources/static/css/forecast.css"
+          th:href="@{/css/forecast.css}"
+          rel="stylesheet"/>
+
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.1/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.1/jquery.min.js}"></script>
+
+    <script src="http://cdn.jsdelivr.net/webjars/bootstrap/3.2.0/js/bootstrap.min.js"
+            th:src="@{/webjars/bootstrap/3.2.0/js/bootstrap.min.js}"></script>
+
+
+
+
+</head>
+<body>
+
+<div class="table-responsive ">
+    <table id="historyTable" class="table table-striped ">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>City</th>
+            <th>Temp_low</th>
+            <th>Temp_high</th>
+            <th>Date</th>
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr th:each="weather: ${history}">
+            <td th:text="${weather.id}"></td>
+            <td th:text="${weather.city}"></td>
+            <td th:text="${weather.temp_low}"></td>
+            <td th:text="${weather.temp_high}"></td>
+            <td th:text="${weather.date}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

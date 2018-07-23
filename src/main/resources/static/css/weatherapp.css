@@ -1,0 +1,31 @@
+.jumbotron {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.active-language {
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 20px;
+    display: block;
+}
+
+@media all and (min-width: 768px) {
+
+    ul.nav.navbar-nav.language-select {
+        float: right;
+    }
+
+    .active-language {
+        color:white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
